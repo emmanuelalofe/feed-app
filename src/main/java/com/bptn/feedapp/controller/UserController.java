@@ -5,10 +5,7 @@ import com.bptn.feedapp.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.Timestamp;
 import java.time.Instant;
@@ -60,5 +57,12 @@ public class UserController {
 
         return "User Created Successfully";
     }
+
+    @PostMapping("/signup")
+    public User signup(@RequestBody User user) {
+        logger.debug("Signing up, username: {}", user.getUsername());
+        return this.userService.signup(user);
+    }
+
 
 }
