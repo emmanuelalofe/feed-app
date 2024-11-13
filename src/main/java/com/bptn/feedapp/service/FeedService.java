@@ -1,5 +1,6 @@
 package com.bptn.feedapp.service;
 
+import com.bptn.feedapp.exception.domain.FeedNotFoundException;
 import com.bptn.feedapp.exception.domain.UserNotFoundException;
 import com.bptn.feedapp.jpa.Feed;
 import com.bptn.feedapp.jpa.User;
@@ -36,4 +37,11 @@ public class FeedService {
 
         return this.feedRepository.save(feed);
     }
+
+    public Feed getFeedById(int feedId) {
+
+        return this.feedRepository.findById(feedId)
+                .orElseThrow(() -> new FeedNotFoundException(String.format("Feed doesn't exist, %d", feedId)));
+    }
+
 }
