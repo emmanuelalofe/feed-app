@@ -24,7 +24,7 @@ spring:
 
   # Email Settings
   mail:
-    username: emmanuelalofedev@gmail.com
+    username: emmanuelfeedappdev@gmail.com
     password: ***REMOVED***
     host: smtp.gmail.com
     port: 587
