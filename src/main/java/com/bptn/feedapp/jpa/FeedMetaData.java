@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "\"feedMetaData\"")
+@Table(name = "\"FeedMetaData\"")
 public class FeedMetaData implements Serializable {
     private static final long serialVersionUID = 1L;
 

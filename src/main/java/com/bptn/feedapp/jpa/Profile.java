@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "\"profile\"")
+@Table(name = "\"Profile\"")
 public class Profile implements Serializable {
     private static final long serialVersionUID = 1L;
 
