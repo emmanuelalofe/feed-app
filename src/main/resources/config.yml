@@ -1,6 +1,6 @@
 # JWT Configuration
 jwt:
-  secret: ***REMOVED***
+  secret: ${JWT_SECRET}
   expiration: 86_400_000 # 24 hours
   issuer: 'Obsidi Academy'
   audience: feedApp
